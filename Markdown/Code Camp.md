@@ -15,7 +15,7 @@ Intro to Git and Command Line <a id="git-section"></a>
 with Brynn Claypoole
 ------------------------------------
 
-Fill in here.
+Schdeuled for October 25th, 2014. Check back for updated docs here soon.
 
 <div class="footer"><p>&copy; Dining Philosophers 2014-15. Page created by <a href="http://pvrnav.com">Pranav Vishnu Ramabhadran</a>.</div>
 
