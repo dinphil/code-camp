@@ -19,7 +19,13 @@ Schdeuled for October 25th, 2014. The tutorial will run from 3 PM to 5 PM in McC
 
 ###What is command line?
 
-Command line is a less visual way of interacting with your computer. In some ways, it's like the "Finder" window. It allows you to open files and navigate through your directories. It's also the interface for interacting with your computer in more complicated and technical ways. You can run processes and programs, ping Internet servers, and do a whole host of other things that require some technical knowledge.
+Have you ever seen programmers, maybe in class, in the computer lab, or on TV, typing into a black box on their computer screens? 
+
+That box is known as a command line. Command line is a less visual way of interacting with your computer. In some ways, it's like a "Finder" window. It allows you to open files and navigate through your directories. It's also the interface for interacting with your computer in more complicated and technical ways. You can run processes and programs, ping Internet servers, and do a whole host of other things that require some technical knowledge.
+
+![Terminal](assets/img/terminal.png)
+
+This is what command line looks like on a Mac.
 
 On Mac and Linux computers, you can access it by searching for the "Terminal" program. In Windows, it's called "Command Prompt". Be careful, because the languages used on these different operating systems are different. Macs use Unix, which is extremely similar to Linux. Windows machines have their own command prompt lanugage that uses different syntax from Unix/Linux.
 
