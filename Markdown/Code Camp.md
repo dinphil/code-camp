@@ -15,9 +15,19 @@ Intro to Git and Command Line <a id="git-section"></a>
 with Brynn Claypoole
 ------------------------------------
 
-Schdeuled for October 25th, 2014. The tutorial will run from 3 to 5 PM in McClelland. Check back for updated docs here soon.
+Schdeuled for October 25th, 2014. The tutorial will run from 3 PM to 5 PM in McClelland. Check back for updated docs here soon.
 
-<div class="footer"><p>&copy; Dining Philosophers 2014-15. Page created by <a href="http://pvrnav.com">Pranav Vishnu Ramabhadran</a>.</div>
+###What is command line?
+
+Command line is a less visual way of interacting with your computer. In some ways, it's like the "Finder" window. It allows you to open files and navigate through your directories. It's also the interface for interacting with your computer in more complicated and technical ways. You can run processes and programs, ping Internet servers, and do a whole host of other things that require some technical knowledge.
+
+On Mac and Linux computers, you can access it by searching for the "Terminal" program. In Windows, it's called "Command Prompt". Be careful, because the languages used on these different operating systems are different. Macs use Unix, which is extremely similar to Linux. Windows machines have their own command prompt lanugage that uses different syntax from Unix/Linux.
+
+###What is Git?
+
+Git is a language used for source control.
+
+<div class="footer"><p>&copy; Dining Philosophers 2014-15. Page created by <a href="http://pvrnav.com">Pranav Vishnu Ramabhadran</a> and <a href="http://github.com/bclay">Brynn Claypoole</a>.</div>
 
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script src="assets/js/nav.js"></script>
