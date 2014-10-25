@@ -27,13 +27,38 @@ That box is known as a command line. Command line is a less visual way of intera
 
 This is what command line looks like on a Mac.
 
-On Mac and Linux computers, you can access it by searching for the "Terminal" program. In Windows, it's called "Command Prompt". Be careful, because the languages used on these different operating systems are different. Macs use Unix, which is extremely similar to Linux. Windows machines have their own command prompt lanugage that uses different syntax from Unix/Linux.
+On Mac and Linux computers, you can access it by searching for the "Terminal" program. In Windows, it's called "Command Prompt". Be careful, because the languages used on these different operating systems are different. Macs use Unix, which is extremely similar to Linux. Windows machines have their own command prompt language that uses different syntax from Unix/Linux.
+
+There are some *basic commands* you should be able to use:
+
+- `ls` (`DIR` on Windows) lists all the files in the current folder.
+- `cd` allows you to change directories. For example, `cd Documents` will move into the folder "Documents", if there is such a folder in the current directory. You can use `ls` (`DIR` on Windows) to check that your current folder contains "Documents". To move up a directory, say back to where you were before you went into Documents, type in `cd ..`.
+- `mkdir` allows you to make a folder. So `mkdir New` makes a folder named 'New'.
+- `mv` (`move` on windows) will let you move files and folders. In Terminal you can do `mv ~/Desktop/MyFile.rtf /Volumes/Backup/MyFolder` to move MyFile.rtf. On Windows `move c:\windows\temp\*.* c:\temp` will move everything from C:\windows\temp to C:\temp. * works as a wildcard operator here.
+
+Command line has some funky syntax that you'll need to get used to:
+
+####So...I'm lost.
+
+Understanding how to navigate in your command line can be weird if you've never done it before. I recommend moving around folders in command line while clicking around a Finder window. Perhaps start in your home directory (frequently represented with `~`) and move into your Documents folder, both on command line and in Finder.
+
+####What are all of these dots for?
+
+Dots can be used as shortcuts for certain commands. `.` is a shortcut referring to the folder you're currently in. `..` is the folder that contains the folder you're currently in. For example, if you're currently in a "Git Code Camp" directory within a "Fall 2014" folder, `.` would refer to "Git Code Camp" and `..` to "Fall 2014".
+
+####Regex sounds like a medication.
+
+It's not. Regex stands for "regular expression", which is a notation typically used for searching. You mainly just need to worry about the `*`, which means "anything that looks like this". For example, if you're trying to move all .txt files in a folder, you can do it without manually moving each one. Just type in `*.txt`, and your command will apply to every file in that folder with a .txt ending.
+
+####Command line gets kind of tedious...
+
+Yeah, we noticed. There are a few shortcuts you can use to make your terminal experience significantly more pleasant. You can frequently hit tab to autocomplete commands or file names. You can also use the arrow keys to move through your command history. For example, the up arrow replaces your current command with the one before it.
 
 ###What is Git?
 
 Git is a language used for source control.
 
-<div class="footer"><p>&copy; Dining Philosophers 2014-15. Page created by <a href="http://pvrnav.com">Pranav Vishnu Ramabhadran</a> and <a href="http://github.com/bclay">Brynn Claypoole</a>.</div>
+<div class="footer"><p>&copy; Dining Philosophers 2014-15. Page created by <a href="http://pvrnav.com">Pranav Vishnu Ramabhadran</a>.</div>
 
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script src="assets/js/nav.js"></script>
