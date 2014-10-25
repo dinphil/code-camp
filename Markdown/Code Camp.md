@@ -15,7 +15,11 @@ Intro to Git and Command Line <a id="git-section"></a>
 with Brynn Claypoole
 ------------------------------------
 
-Schdeuled for October 25th, 2014. The tutorial will run from 3 PM to 5 PM in McClelland. Check back for updated docs here soon.
+Schdeuled for October 25th, 2014. The tutorial will run from 3 PM to 5 PM in McClelland.
+
+###Installing Git
+
+Start off by getting ready to use Git via command line. You can find downloadable versions [here](http://git-scm.com/downloads). You may already have git installed: If you have a Mac/Linux machine, search for the "Terminal" application, then type "git" and hit enter. If it doesn't say "command not found", you should be good! Windows users should search their applications for "Git Bash".
 
 ###What is command line?
 
@@ -32,9 +36,9 @@ On Mac and Linux computers, you can access it by searching for the "Terminal" pr
 There are some *basic commands* you should be able to use:
 
 - `ls` (`DIR` on Windows) lists all the files in the current folder.
-- `cd` allows you to change directories. For example, `cd Documents` will move into the folder "Documents", if there is such a folder in the current directory. You can use `ls` (`DIR` on Windows) to check that your current folder contains "Documents". To move up a directory, say back to where you were before you went into Documents, type in `cd ..`.
+- `cd` allows you to change directories. For example, `cd Documents` will move into the folder "Documents", if there is such a folder in the current directory. You can use `ls` (`DIR` on Windows) to check that your current folder contains "Documents".
 - `mkdir` allows you to make a folder. So `mkdir New` makes a folder named 'New'.
-- `mv` (`move` on windows) will let you move files and folders. In Terminal you can do `mv ~/Desktop/MyFile.rtf /Volumes/Backup/MyFolder` to move MyFile.rtf. On Windows `move c:\windows\temp\*.* c:\temp` will move everything from C:\windows\temp to C:\temp. * works as a wildcard operator here.
+- `mv` (`move` on Windows) will let you move files and folders. In Terminal you can do `mv ~/Desktop/MyFile.rtf /Volumes/Backup/MyFolder` to move MyFile.rtf. On Windows `move c:\windows\temp\*.* c:\temp` will move everything from C:\windows\temp to C:\temp.
 
 Command line has some funky syntax that you'll need to get used to:
 
@@ -56,7 +60,41 @@ Yeah, we noticed. There are a few shortcuts you can use to make your terminal ex
 
 ###What is Git?
 
-Git is a language used for source control.
+Git is a beautiful gift from the heavens that helps us with something called source control. Imagine (or think back to) a worst-case situation: You've been working on your code for hours and hours. It was kind of working twenty minutes ago, but you need to fix a couple things to get it working. This time, when you try running it, nothing works! You've changed a lot of different things in twenty minutes and have no idea what broke it. You'd really like to just go back to the version you had twenty minutes ago, but there's no easy way to do that.
+
+Git is essentially a language (or group of concepts and commands) for fixing this problem via source control. In short, you save snapshots of your code (called _commits_) from different points in time. One project and all of it's versions are stored in a _repository_, or _repo_.
+
+![Github logo](assets/img/github-logo.png)
+
+####And Github?
+
+Github is the online tool for using Git. You can:
+
+- Quickly save commits in repos online (so you don't lose good work or eat up memory on your computer).
+- Work collaboratively with peers on class, work, hackathon, or outside projects.
+- Create a profile of projects to show off to employers.
+- Find open source projects you think are interesting and contribute.
+
+Most importantly, Github has an adorable mascot named Octocat (in the logo above). They have dozens of unique and fun stickers with different versions of Octocat that coders treasure like gold.
+
+![Github stickers](assets/img/octocat-stickers.jpg)
+
+###Key Concepts
+
+When working with Git and Github, it's easiest to imagine that your code is being stored in two different places: locally, on your own computer, and remotely, on Github's servers (the alias for that location is *origin*). Generally, you edit code on your computer, create a commit (snapshot), and send it to the Github servers. Github stores all previous versions of your code.
+
+###Basic Git Commands
+
+_Cloning_: When you clone a repository, you take all of the code from a repo and create a local version of it on your computer. This is generally how you get code off of Github so you can actually edit it. To clone a repo, try: *git clone (HTTPS address of online repo)*, like:
+
+        //Clone a repo called "node-basic" from user "bclay" 
+        git clone https://github.com/bclay/node-basic/
+        //Go into the repo
+        cd node-basic
+
+_Forking_: Forking allows you to copy the entierty of someone else's repo onto your Github account online. You still need to clone it (from your account) to get the code on your computer. You can fork a repo by clicking the "Fork" button on a repo's Github page.
+
+
 
 <div class="footer"><p>&copy; Dining Philosophers 2014-15. Page created by <a href="http://pvrnav.com">Pranav Vishnu Ramabhadran</a>.</div>
 
