@@ -79,8 +79,6 @@ Most importantly, Github has an adorable mascot named Octocat (in the logo above
 
 ![Github stickers](assets/img/octocat-stickers.jpg)
 
-###Key Concepts
-
 When working with Git and Github, it's easiest to imagine that your code is being stored in two different places: locally, on your own computer, and remotely, on Github's servers (the alias for that location is *origin*). Generally, you edit code on your computer, create a commit (snapshot), and send it to the Github servers. Github stores all previous versions of your code.
 
 ###Basic Git Commands
@@ -93,6 +91,21 @@ _Cloning_: When you clone a repository, you take all of the code from a repo and
         cd node-basic
 
 _Forking_: Forking allows you to copy the entierty of someone else's repo onto your Github account online. You still need to clone it (from your account) to get the code on your computer. You can fork a repo by clicking the "Fork" button on a repo's Github page.
+
+_Committing_: As stated above, committing is taking a snapshot of your code to be saved. Before you commit, you always need to do *git add .* first. "Adding" is commonly explained as "staging your changes to be committed". You don't really need to know what that means, just do it before you commit. To commit, type in *git commit -m 'some message'*.
+
+![Github commits](assets/img/git-commit.png)
+
+_Pushing_: Pushing is simply sending code to your repo on Github. See below for the full process you should go through every time you send code to Github:
+
+        //Stage changes
+        git add .
+        //Commit current code
+        git commit -m 'Updated CSS'
+        //Push your code to Github (origin) at the master branch
+        git push origin master
+
+_Pulling_: The expected opposite of pushing is pulling. You type *git pull* every time you need to get code from a repo you've already cloned off Github. When working with other coders, it's good practice to pull every time you begin working on code.
 
 
 

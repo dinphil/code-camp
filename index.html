@@ -266,7 +266,6 @@ img.full-img{
 </ul>
 <p>Most importantly, Github has an adorable mascot named Octocat (in the logo above). They have dozens of unique and fun stickers with different versions of Octocat that coders treasure like gold.</p>
 <p><img alt="Github stickers" src="assets/img/octocat-stickers.jpg" /></p>
-<h3 id="key-concepts"><a name="user-content-key-concepts" href="#key-concepts" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>Key Concepts</h3>
 <p>When working with Git and Github, it&rsquo;s easiest to imagine that your code is being stored in two different places: locally, on your own computer, and remotely, on Github&rsquo;s servers (the alias for that location is <em>origin</em>). Generally, you edit code on your computer, create a commit (snapshot), and send it to the Github servers. Github stores all previous versions of your code.</p>
 <h3 id="basic-git-commands"><a name="user-content-basic-git-commands" href="#basic-git-commands" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>Basic Git Commands</h3>
 <p><em>Cloning</em>: When you clone a repository, you take all of the code from a repo and create a local version of it on your computer. This is generally how you get code off of Github so you can actually edit it. To clone a repo, try: <em>git clone (HTTPS address of online repo)</em>, like:</p>
@@ -275,6 +274,16 @@ img.full-img{
     //Go into the repo
     cd node-basic</code></pre>
 <p><em>Forking</em>: Forking allows you to copy the entierty of someone else&rsquo;s repo onto your Github account online. You still need to clone it (from your account) to get the code on your computer. You can fork a repo by clicking the &ldquo;Fork&rdquo; button on a repo&rsquo;s Github page.</p>
+<p><em>Committing</em>: As stated above, committing is taking a snapshot of your code to be saved. Before you commit, you always need to do <em>git add .</em> first. &ldquo;Adding&rdquo; is commonly explained as &ldquo;staging your changes to be committed&rdquo;. You don&rsquo;t really need to know what that means, just do it before you commit. To commit, type in <em>git commit -m &lsquo;some message&rsquo;</em>.</p>
+<p><img alt="Github commits" src="assets/img/git-commit.png" /></p>
+<p><em>Pushing</em>: Pushing is simply sending code to your repo on Github. See below for the full process you should go through every time you send code to Github:</p>
+<pre><code>    //Stage changes
+    git add .
+    //Commit current code
+    git commit -m &lsquo;Updated CSS&rsquo;
+    //Push your code to Github (origin) at the master branch
+    git push origin master</code></pre>
+<p><em>Pulling</em>: The expected opposite of pushing is pulling. You type <em>git pull</em> every time you need to get code from a repo you&rsquo;ve already cloned off Github. When working with other coders, it&rsquo;s good practice to pull every time you begin working on code.</p>
 <div class="footer"><p>&copy; Dining Philosophers 2014-15. Page created by <a href="http://pvrnav.com">Pranav Vishnu Ramabhadran</a>.</div>
 
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
