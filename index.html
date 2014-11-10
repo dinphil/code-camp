@@ -228,7 +228,63 @@ img.full-img{
 </blockquote>
 <h1 id="intro-to-git-and-command-line"><a name="user-content-intro-to-git-and-command-line" href="#intro-to-git-and-command-line" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>Intro to Git and Command Line <a id="git-section"></a></h1>
 <h2 id="with-brynn-claypoole"><a name="user-content-with-brynn-claypoole" href="#with-brynn-claypoole" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>with Brynn Claypoole</h2>
-<p>Schdeuled for October 25th, 2014. Check back for updated docs here soon.</p>
+<p>Schdeuled for October 25th, 2014. The tutorial will run from 3 PM to 5 PM in McClelland.</p>
+<h3 id="installing-git"><a name="user-content-installing-git" href="#installing-git" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>Installing Git</h3>
+<p>Start off by getting ready to use Git via command line. You can find downloadable versions <a href="http://git-scm.com/downloads">here</a>. You may already have git installed: If you have a Mac/Linux machine, search for the &ldquo;Terminal&rdquo; application, then type &ldquo;git&rdquo; and hit enter. If it doesn&rsquo;t say &ldquo;command not found&rdquo;, you should be good! Windows users should search their applications for &ldquo;Git Bash&rdquo;.</p>
+<h3 id="what-is-command-line"><a name="user-content-what-is-command-line" href="#what-is-command-line" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>What is command line?</h3>
+<p>Have you ever seen programmers, maybe in class, in the computer lab, or on TV, typing into a black box on their computer screens? </p>
+<p>That box is known as a command line. Command line is a less visual way of interacting with your computer. In some ways, it&rsquo;s like a &ldquo;Finder&rdquo; window. It allows you to open files and navigate through your directories. It&rsquo;s also the interface for interacting with your computer in more complicated and technical ways. You can run processes and programs, ping Internet servers, and do a whole host of other things that require some technical knowledge.</p>
+<p><img alt="Terminal" src="assets/img/terminal.png" /></p>
+<p>This is what command line looks like on a Mac.</p>
+<p>On Mac and Linux computers, you can access it by searching for the &ldquo;Terminal&rdquo; program. In Windows, it&rsquo;s called &ldquo;Command Prompt&rdquo;. Be careful, because the languages used on these different operating systems are different. Macs use Unix, which is extremely similar to Linux. Windows machines have their own command prompt language that uses different syntax from Unix/Linux.</p>
+<p>There are some <em>basic commands</em> you should be able to use:</p>
+<ul>
+<li><code>ls</code> (<code>DIR</code> on Windows) lists all the files in the current folder.</li>
+<li><code>cd</code> allows you to change directories. For example, <code>cd Documents</code> will move into the folder &ldquo;Documents&rdquo;, if there is such a folder in the current directory. You can use <code>ls</code> (<code>DIR</code> on Windows) to check that your current folder contains &ldquo;Documents&rdquo;.</li>
+<li><code>mkdir</code> allows you to make a folder. So <code>mkdir New</code> makes a folder named &lsquo;New&rsquo;.</li>
+<li><code>mv</code> (<code>move</code> on Windows) will let you move files and folders. In Terminal you can do <code>mv ~/Desktop/MyFile.rtf /Volumes/Backup/MyFolder</code> to move MyFile.rtf. On Windows <code>move c:\windows\temp\*.* c:\temp</code> will move everything from C:\windows\temp to C:\temp.</li>
+</ul>
+<p>Command line has some funky syntax that you&rsquo;ll need to get used to:</p>
+<h4 id="soim-lost"><a name="user-content-soim-lost" href="#soim-lost" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>So&hellip;I&rsquo;m lost.</h4>
+<p>Understanding how to navigate in your command line can be weird if you&rsquo;ve never done it before. I recommend moving around folders in command line while clicking around a Finder window. Perhaps start in your home directory (frequently represented with <code>~</code>) and move into your Documents folder, both on command line and in Finder.</p>
+<h4 id="what-are-all-of-these-dots-for"><a name="user-content-what-are-all-of-these-dots-for" href="#what-are-all-of-these-dots-for" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>What are all of these dots for?</h4>
+<p>Dots can be used as shortcuts for certain commands. <code>.</code> is a shortcut referring to the folder you&rsquo;re currently in. <code>..</code> is the folder that contains the folder you&rsquo;re currently in. For example, if you&rsquo;re currently in a &ldquo;Git Code Camp&rdquo; directory within a &ldquo;Fall 2014&rdquo; folder, <code>.</code> would refer to &ldquo;Git Code Camp&rdquo; and <code>..</code> to &ldquo;Fall 2014&rdquo;.</p>
+<h4 id="regex-sounds-like-a-medication"><a name="user-content-regex-sounds-like-a-medication" href="#regex-sounds-like-a-medication" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>Regex sounds like a medication.</h4>
+<p>It&rsquo;s not. Regex stands for &ldquo;regular expression&rdquo;, which is a notation typically used for searching. You mainly just need to worry about the <code>*</code>, which means &ldquo;anything that looks like this&rdquo;. For example, if you&rsquo;re trying to move all .txt files in a folder, you can do it without manually moving each one. Just type in <code>*.txt</code>, and your command will apply to every file in that folder with a .txt ending.</p>
+<h4 id="command-line-gets-kind-of-tedious"><a name="user-content-command-line-gets-kind-of-tedious" href="#command-line-gets-kind-of-tedious" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>Command line gets kind of tedious&hellip;</h4>
+<p>Yeah, we noticed. There are a few shortcuts you can use to make your terminal experience significantly more pleasant. You can frequently hit tab to autocomplete commands or file names. You can also use the arrow keys to move through your command history. For example, the up arrow replaces your current command with the one before it.</p>
+<h3 id="what-is-git"><a name="user-content-what-is-git" href="#what-is-git" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>What is Git?</h3>
+<p>Git is a beautiful gift from the heavens that helps us with something called source control. Imagine (or think back to) a worst-case situation: You&rsquo;ve been working on your code for hours and hours. It was kind of working twenty minutes ago, but you need to fix a couple things to get it working. This time, when you try running it, nothing works! You&rsquo;ve changed a lot of different things in twenty minutes and have no idea what broke it. You&rsquo;d really like to just go back to the version you had twenty minutes ago, but there&rsquo;s no easy way to do that.</p>
+<p>Git is essentially a language (or group of concepts and commands) for fixing this problem via source control. In short, you save snapshots of your code (called <em>commits</em>) from different points in time. One project and all of it&rsquo;s versions are stored in a <em>repository</em>, or <em>repo</em>.</p>
+<p><img alt="Github logo" src="assets/img/github-logo.png" /></p>
+<h4 id="and-github"><a name="user-content-and-github" href="#and-github" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>And Github?</h4>
+<p>Github is the online tool for using Git. You can:</p>
+<ul>
+<li>Quickly save commits in repos online (so you don&rsquo;t lose good work or eat up memory on your computer).</li>
+<li>Work collaboratively with peers on class, work, hackathon, or outside projects.</li>
+<li>Create a profile of projects to show off to employers.</li>
+<li>Find open source projects you think are interesting and contribute.</li>
+</ul>
+<p>Most importantly, Github has an adorable mascot named Octocat (in the logo above). They have dozens of unique and fun stickers with different versions of Octocat that coders treasure like gold.</p>
+<p><img alt="Github stickers" src="assets/img/octocat-stickers.jpg" /></p>
+<p>When working with Git and Github, it&rsquo;s easiest to imagine that your code is being stored in two different places: locally, on your own computer, and remotely, on Github&rsquo;s servers (the alias for that location is <em>origin</em>). Generally, you edit code on your computer, create a commit (snapshot), and send it to the Github servers. Github stores all previous versions of your code.</p>
+<h3 id="basic-git-commands"><a name="user-content-basic-git-commands" href="#basic-git-commands" class="headeranchor-link"  aria-hidden="true"><span class="headeranchor"></span></a>Basic Git Commands</h3>
+<p><em>Cloning</em>: When you clone a repository, you take all of the code from a repo and create a local version of it on your computer. This is generally how you get code off of Github so you can actually edit it. To clone a repo, try: <em>git clone (HTTPS address of online repo)</em>, like:</p>
+<pre><code>    //Clone a repo called &ldquo;node-basic&rdquo; from user &ldquo;bclay&rdquo; 
+    git clone https://github.com/bclay/node-basic/
+    //Go into the repo
+    cd node-basic</code></pre>
+<p><em>Forking</em>: Forking allows you to copy the entierty of someone else&rsquo;s repo onto your Github account online. You still need to clone it (from your account) to get the code on your computer. You can fork a repo by clicking the &ldquo;Fork&rdquo; button on a repo&rsquo;s Github page.</p>
+<p><em>Committing</em>: As stated above, committing is taking a snapshot of your code to be saved. Before you commit, you always need to do <em>git add .</em> first. &ldquo;Adding&rdquo; is commonly explained as &ldquo;staging your changes to be committed&rdquo;. You don&rsquo;t really need to know what that means, just do it before you commit. To commit, type in <em>git commit -m &lsquo;some message&rsquo;</em>.</p>
+<p><img alt="Github commits" src="assets/img/git-commit.png" /></p>
+<p><em>Pushing</em>: Pushing is simply sending code to your repo on Github. See below for the full process you should go through every time you send code to Github:</p>
+<pre><code>    //Stage changes
+    git add .
+    //Commit current code
+    git commit -m &lsquo;Updated CSS&rsquo;
+    //Push your code to Github (origin) at the master branch
+    git push origin master</code></pre>
+<p><em>Pulling</em>: The expected opposite of pushing is pulling. You type <em>git pull</em> every time you need to get code from a repo you&rsquo;ve already cloned off Github. When working with other coders, it&rsquo;s good practice to pull every time you begin working on code.</p>
 <div class="footer"><p>&copy; Dining Philosophers 2014-15. Page created by <a href="http://pvrnav.com">Pranav Vishnu Ramabhadran</a>.</div>
 
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
