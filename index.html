@@ -239,10 +239,11 @@ img.full-img{
 <p>It basically let&rsquo;s you select certain HTML elements and do cool things with them! Brush up on what HTML is <a href="http://www.w3schools.com/html/html_intro.asp">here</a>.</p>
 <h3 id="playing-around-in-the-google-chrome-javascript-console"><a name="user-content-playing-around-in-the-google-chrome-javascript-console" href="#playing-around-in-the-google-chrome-javascript-console" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Playing around in the Google Chrome Javascript Console</h3>
 <p>To get acquainted with jQuery and Javascript, it&rsquo;s a great idea to play around with websites using the console! It allows you to inject bits of Javascript code into the website so you can see whatever changes you make live. (Make sure the website you&rsquo;re playing around with has jQuery enabled like <a href="http://www.dolphin.upenn.edu/hksa/index.html">this</a> one.)</p>
-<p>Things you can try:<br />
-        // changing the css of the area<br />
-        $(&ldquo;[HTML SELECTOR]&rdquo;).css(&ldquo;color&rdquo;, &ldquo;red&rdquo;);</p>
-<pre><code>    // adding event listeners so you can change the area when you do something to it (mouseclick)
+<p>Things you can try:</p>
+<pre><code>    // changing the css of the area
+    $(&ldquo;[HTML SELECTOR]&rdquo;).css(&ldquo;color&rdquo;, &ldquo;red&rdquo;);
+
+    // adding event listeners so you can change the area when you do something to it (mouseclick)
     $(&ldquo;[HTML SELECTOR]&rdquo;).on(&ldquo;click&rdquo;, function() {
             $(&ldquo;[HTML SELECTOR]&rdquo;).css(&ldquo;color&rdquo;, &ldquo;blue&rdquo;);
         });

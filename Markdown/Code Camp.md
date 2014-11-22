@@ -32,6 +32,7 @@ It basically let's you select certain HTML elements and do cool things with them
 To get acquainted with jQuery and Javascript, it's a great idea to play around with websites using the console! It allows you to inject bits of Javascript code into the website so you can see whatever changes you make live. (Make sure the website you're playing around with has jQuery enabled like [this](http://www.dolphin.upenn.edu/hksa/index.html) one.)
 
 Things you can try:
+
         // changing the css of the area
         $("[HTML SELECTOR]").css("color", "red");
 
