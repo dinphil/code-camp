@@ -15,7 +15,7 @@ Intro to jQuery <a id="git-section"></a>
 with Cathy Chen and Joe Farned
 ------------------------------------
 
-Scheduled for October 25th, 2014. The tutorial will run from 3 PM to 5 PM in McClelland. See the powerpoint slides for the workshop [here](assets/intro_jquery.pdf);
+Scheduled for November 22th, 2014. The tutorial will run from 3 PM to 5 PM in McClelland. See the powerpoint slides for the workshop [here](assets/intro_jquery.pdf);
 
 ###To install
 * Sublime Text
