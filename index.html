@@ -226,6 +226,86 @@ img.full-img{
 <blockquote>
 <p>These workshops have been organized by the Dining Philosophers with the help of many talented individuals. Individual workshops will be credited to the people that made and ran them.</p>
 </blockquote>
+<h1 id="intro-to-jquery"><a name="user-content-intro-to-jquery" href="#intro-to-jquery" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Intro to jQuery <a id="git-section"></a></h1>
+<h2 id="with-cathy-chen-and-joe-farned"><a name="user-content-with-cathy-chen-and-joe-farned" href="#with-cathy-chen-and-joe-farned" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>with Cathy Chen and Joe Farned</h2>
+<p>Scheduled for November 22th, 2014. The tutorial will run from 3 PM to 5 PM in McClelland. See the powerpoint slides for the workshop <a href="assets/intro_jquery.pdf">here</a>;</p>
+<h3 id="to-install"><a name="user-content-to-install" href="#to-install" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>To install</h3>
+<ul>
+<li>Sublime Text</li>
+<li>Google Chrome</li>
+</ul>
+<h3 id="what-is-jquery"><a name="user-content-what-is-jquery" href="#what-is-jquery" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>What is jQuery?</h3>
+<p>jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers. With a combination of versatility and extensibility, jQuery has changed the way that millions of people write JavaScript. (<a href="http://jquery.com/"><a href="http://jquery.com/"><a href="http://jquery.com/">http://jquery.com/</a></a></a>).</p>
+<p>It basically let&rsquo;s you select certain HTML elements and do cool things with them! Brush up on what HTML is <a href="http://www.w3schools.com/html/html_intro.asp">here</a>.</p>
+<h3 id="playing-around-in-the-google-chrome-javascript-console"><a name="user-content-playing-around-in-the-google-chrome-javascript-console" href="#playing-around-in-the-google-chrome-javascript-console" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Playing around in the Google Chrome Javascript Console</h3>
+<p>To get acquainted with jQuery and Javascript, it&rsquo;s a great idea to play around with websites using the console! It allows you to inject bits of Javascript code into the website so you can see whatever changes you make live. (Make sure the website you&rsquo;re playing around with has jQuery enabled like <a href="http://www.dolphin.upenn.edu/hksa/index.html">this</a> one.)</p>
+<p>Things you can try:</p>
+<pre><code>    // changing the css of the area
+    $(&ldquo;[HTML SELECTOR]&rdquo;).css(&ldquo;color&rdquo;, &ldquo;red&rdquo;);
+
+    // adding event listeners so you can change the area when you do something to it (mouseclick)
+    $(&ldquo;[HTML SELECTOR]&rdquo;).on(&ldquo;click&rdquo;, function() {
+            $(&ldquo;[HTML SELECTOR]&rdquo;).css(&ldquo;color&rdquo;, &ldquo;blue&rdquo;);
+        });
+
+    // the cool thing about jQuery is that you can click one area of the page and have something happen to a totally separate section of the page</code></pre>
+<h3 id="hadouken-animation-challenge"><a name="user-content-hadouken-animation-challenge" href="#hadouken-animation-challenge" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Hadouken Animation Challenge</h3>
+<p>For some practice, let&rsquo;s build an animated Street Fighter using the jQuery we have learned. The original tutorial can be found <a href="http://www.thinkful.com/learn/intro-to-jquery">here</a>.</p>
+<p><a href="assets/html/fighter_after.html">Let&rsquo;s start by seeing how it will look when we&rsquo;ve finished!</a></p>
+<h4 id="download-the-file"><a name="user-content-download-the-file" href="#download-the-file" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Download the file</h4>
+<p>Let&rsquo;s start by downloading a file to get us started <a href="assets/html/fighter_before.html">here</a>. This file (fighter_before.html) is a basic HTML file. We&rsquo;ve already included the line:</p>
+<pre><code>    &lt;script src=&rdquo;http://code.jquery.com/jquery-1.11.0.min.js&rdquo;&gt;&lt;/script&gt;</code></pre>
+<p>in the header. This imports the jQuery library into your file.</p>
+<h4 id="use-jquery-to-add-the-starting-image"><a name="user-content-use-jquery-to-add-the-starting-image" href="#use-jquery-to-add-the-starting-image" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Use jQuery to add the starting image</h4>
+<p>Our &lsquo;body&rsquo; right now has only on one &lsquo;div&rsquo; which is &lsquo;#my-div&rsquo;. We will start by adding the image to this div by adding the following code right below the &lsquo;/<strong> Add your code between here </strong>/&rsquo; comment:</p>
+<pre><code>    $(&lsquo;#my-div&rsquo;).html(&lsquo;&lt;img src=&rdquo;http://i.imgur.com/90Mmdcm.png&rdquo;&gt;&rsquo;)</code></pre>
+<p>This adds the following &lsquo;HTML&rsquo; under my &lsquo;#my-div&rsquo;:</p>
+<pre><code>    &lt;img src=&rdquo;http://i.imgur.com/90Mmdcm.png&rdquo;&gt;</code></pre>
+<p>Now, when you open your &lsquo;before_fighter.html&rsquo; in your browser, you should see Ryu.</p>
+<h4 id="add-the-first-animation"><a name="user-content-add-the-first-animation" href="#add-the-first-animation" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Add the first animation</h4>
+<p>We want Ryu to get ready to fire when we hover our mouse over him. To do this, we use jQuery to select the image. Add the following code:</p>
+<pre><code>    $(&lsquo;#my-div img&rsquo;).hover( function() {
+        this.src = &lsquo;http://i.imgur.com/nTj3Fxx.gif&rsquo;
+    }, function() {
+        this.src = &lsquo;http://i.imgur.com/90Mmdcm.png&rsquo;
+    })</code></pre>
+<p>The first function says we should replace the current image with the one at &lsquo;<a href="http://i.imgur.com/nTj3Fxx.gif">http://i.imgur.com/nTj3Fxx.gif</a>&lsquo; when we hover the image. The second function tells us what image to use when we move our mouse off the image. Putting them together, we get a nice animating.</p>
+<h4 id="make-ryu-shoot-first-step"><a name="user-content-make-ryu-shoot-first-step" href="#make-ryu-shoot-first-step" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Make Ryu shoot: first step</h4>
+<p>When the user clicks on Ryu, we want him to hunch down and appear as if he&rsquo;s shooting. To do this, we use the jQuery &lsquo;mousedown&rsquo; function. &lsquo;.mousedown&rsquo; is called when we click on the image. Add the following line:</p>
+<pre><code>    $(&lsquo;#my-div img&rsquo;).mousedown( function() {
+        this.src = &lsquo;http://i.imgur.com/Rfj0a80.png&rsquo; 
+    })</code></pre>
+<p>Now, the image we added earlier will be replaced by the new image of Ryu hunched down. As soon as we&rsquo;re done clicking (which is pretty much instantaneous), we want to revert back to the image of Ryu we started with. To this, we use the mouse-up function, which is not much different than the &lsquo;.mousedown&rsquo;. It&rsquo;s just called when we finish clicking. Add the following line:</p>
+<pre><code>    $(&lsquo;#my-div img&rsquo;).mouseup(function() {
+        this.src = &lsquo;http://i.imgur.com/90Mmdcm.png&rsquo;
+    })</code></pre>
+<h4 id="make-ryu-shoot-second-step"><a name="user-content-make-ryu-shoot-second-step" href="#make-ryu-shoot-second-step" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Make Ryu shoot: second step</h4>
+<p>Now, we&rsquo;re going to add in the Hadouken - what Ryu shoots. To do this, we realize that when we click, we want a new image - of the Hadouken - to be added to screen. </p>
+<p>In fact, we just saw an example of how to get a click event - the &lsquo;.mousedown&rsquo; function! Let&rsquo;s use it again. This time, we&rsquo;ll add a new image to &lsquo;#my-div&rsquo;. Add the following code:</p>
+<pre><code>    $(&lsquo;#my-div img&rsquo;).mousedown(function() {
+        $(&lsquo;#my-div&rsquo;).append(
+        &lsquo;&lt;img class=&rdquo;shooting-space&rdquo; src=&rdquo;http://i.imgur.com/oTyQRvX.gif&rdquo;&gt;&rsquo;
+        );
+    })</code></pre>
+<p>We give our image the class &lsquo;shooting-space&rsquo; so that we can modify it in the next step. This will make sense in just a second.</p>
+<h4 id="make-ryu-shoot-third-step"><a name="user-content-make-ryu-shoot-third-step" href="#make-ryu-shoot-third-step" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Make Ryu shoot: third step</h4>
+<p>Here&rsquo;s where the real magic occurs. We&rsquo;re going to use the jQuery animate function. We&rsquo;ll explain it here, but you can also read the <a href="http://api.jquery.com/animate/">docs</a> for a good idea of what it does.</p>
+<p>First, we notice the &lsquo;.mousedown&rsquo; function below, which will look familiar. When we click Ryu, the followingn code will execute. Go ahead and add it to your file:</p>
+<pre><code>    $(&lsquo;#my-div img&rsquo;).mousedown(function() {
+        $(&lsquo;.shooting-space&rsquo;).animate( {
+            &ldquo;margin-left&rdquo;: &ldquo;600px&rdquo;
+        }, 1000, &lsquo;swing&rsquo;, function() {
+            this.remove();
+        })
+    })</code></pre>
+<p>the &lsquo;.animate&rsquo; function will, well, animate the Hadouken. Let&rsquo;s break it apart. First, </p>
+<pre><code>    &ldquo;margin-left&rdquo;: &ldquo;600px&rdquo;</code></pre>
+<p>tells us that we are going to slowly add a margin (space) to the left of the Hadouken image. In fact, we want it to  take</p>
+<pre><code>    1000
+</code></pre>
+<p>milliseconds to slowly add this margin. The &lsquo;swing&rsquo; part tells jQuery to ease in and out. We could have instead used &lsquo;linear&rsquo; which would not ease in and out. Finally, the last function says what the code should do when the animation is finished - in this case, remove the image of the Hadouken.</p>
+<h3 id="make-sure-its-working"><a name="user-content-make-sure-its-working" href="#make-sure-its-working" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Make sure it&rsquo;s working</h3>
+<p>To check your final product, you can download a finished version <a href="assets/html/fighter_after.html">here</a>.</p>
 <h1 id="intro-to-git-and-command-line"><a name="user-content-intro-to-git-and-command-line" href="#intro-to-git-and-command-line" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Intro to Git and Command Line <a id="git-section"></a></h1>
 <h2 id="with-brynn-claypoole"><a name="user-content-with-brynn-claypoole" href="#with-brynn-claypoole" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>with Brynn Claypoole</h2>
 <p>Schdeuled for October 25th, 2014. The tutorial will run from 3 PM to 5 PM in McClelland.</p>
@@ -285,65 +365,6 @@ img.full-img{
     //Push your code to Github (origin) at the master branch
     git push origin master</code></pre>
 <p><em>Pulling</em>: The expected opposite of pushing is pulling. You type <em>git pull</em> every time you need to get code from a repo you&rsquo;ve already cloned off Github. When working with other coders, it&rsquo;s good practice to pull every time you begin working on code.</p>
-<h1 id="intro-to-jquery"><a name="user-content-intro-to-jquery" href="#intro-to-jquery" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Intro to jQuery <a id="git-section"></a></h1>
-<h2 id="with-cathy-chen-and-joe-farned"><a name="user-content-with-cathy-chen-and-joe-farned" href="#with-cathy-chen-and-joe-farned" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>with Cathy Chen and Joe Farned</h2>
-<h2 id="example-project-building-an-animated-street-fighter"><a name="user-content-example-project-building-an-animated-street-fighter" href="#example-project-building-an-animated-street-fighter" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Example Project: Building an animated Street Fighter</h2>
-<p>For some practice, let&rsquo;s build an animated Street Fighter using the jQuery we have learned. The original tutorial can be found <a href="http://www.thinkful.com/learn/intro-to-jquery">here</a>.</p>
-<p><a href="assets/html/fighter_after.html">Let&rsquo;s start by seeing how it will look when we&rsquo;ve finished!</a></p>
-<h3 id="download-the-file"><a name="user-content-download-the-file" href="#download-the-file" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Download the file</h3>
-<p>Let&rsquo;s start by downloading a file to get us started <a href="assets/html/fighter_before.html">here</a>. This file (fighter_before.html) is a basic HTML file. We&rsquo;ve already included the line:</p>
-<pre><code>    &lt;script src=&rdquo;http://code.jquery.com/jquery-1.11.0.min.js&rdquo;&gt;&lt;/script&gt;</code></pre>
-<p>in the header. This imports the jQuery library into your file.</p>
-<h3 id="use-jquery-to-add-the-starting-image"><a name="user-content-use-jquery-to-add-the-starting-image" href="#use-jquery-to-add-the-starting-image" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Use jQuery to add the starting image</h3>
-<p>Our &lsquo;body&rsquo; right now has only on one &lsquo;div&rsquo; which is &lsquo;#my-div&rsquo;. We will start by adding the image to this div by adding the following code right below the &lsquo;/<strong> Add your code between here </strong>/&rsquo; comment:</p>
-<pre><code>    $(&lsquo;#my-div&rsquo;).html(&lsquo;&lt;img src=&rdquo;http://i.imgur.com/90Mmdcm.png&rdquo;&gt;&rsquo;)</code></pre>
-<p>This adds the following &lsquo;HTML&rsquo; under my &lsquo;#my-div&rsquo;:</p>
-<pre><code>    &lt;img src=&rdquo;http://i.imgur.com/90Mmdcm.png&rdquo;&gt;</code></pre>
-<p>Now, when you open your &lsquo;before_fighter.html&rsquo; in your browser, you should see Ryu.</p>
-<h3 id="add-the-first-animation"><a name="user-content-add-the-first-animation" href="#add-the-first-animation" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Add the first animation</h3>
-<p>We want Ryu to get ready to fire when we hover our mouse over him. To do this, we use jQuery to select the image. Add the following code:</p>
-<pre><code>    $(&lsquo;#my-div img&rsquo;).hover( function() {
-        this.src = &lsquo;http://i.imgur.com/nTj3Fxx.gif&rsquo;
-    }, function() {
-        this.src = &lsquo;http://i.imgur.com/90Mmdcm.png&rsquo;
-    })</code></pre>
-<p>The first function says we should replace the current image with the one at &lsquo;<a href="http://i.imgur.com/nTj3Fxx.gif">http://i.imgur.com/nTj3Fxx.gif</a>&lsquo; when we hover the image. The second function tells us what image to use when we move our mouse off the image. Putting them together, we get a nice animating.</p>
-<h3 id="make-ryu-shoot-first-step"><a name="user-content-make-ryu-shoot-first-step" href="#make-ryu-shoot-first-step" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Make Ryu shoot: first step</h3>
-<p>When the user clicks on Ryu, we want him to hunch down and appear as if he&rsquo;s shooting. To do this, we use the jQuery &lsquo;mousedown&rsquo; function. &lsquo;.mousedown&rsquo; is called when we click on the image. Add the following line:</p>
-<pre><code>    $(&lsquo;#my-div img&rsquo;).mousedown( function() {
-        this.src = &lsquo;http://i.imgur.com/Rfj0a80.png&rsquo; 
-    })</code></pre>
-<p>Now, the image we added earlier will be replaced by the new image of Ryu hunched down. As soon as we&rsquo;re done clicking (which is pretty much instantaneous), we want to revert back to the image of Ryu we started with. To this, we use the mouse-up function, which is not much different than the &lsquo;.mousedown&rsquo;. It&rsquo;s just called when we finish clicking. Add the following line:</p>
-<pre><code>    $(&lsquo;#my-div img&rsquo;).mouseup(function() {
-        this.src = &lsquo;http://i.imgur.com/90Mmdcm.png&rsquo;
-    })</code></pre>
-<h3 id="make-ryu-shoot-second-step"><a name="user-content-make-ryu-shoot-second-step" href="#make-ryu-shoot-second-step" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Make Ryu shoot: second step</h3>
-<p>Now, we&rsquo;re going to add in the Hadouken - what Ryu shoots. To do this, we realize that when we click, we want a new image - of the Hadouken - to be added to screen. </p>
-<p>In fact, we just saw an example of how to get a click event - the &lsquo;.mousedown&rsquo; function! Let&rsquo;s use it again. This time, we&rsquo;ll add a new image to &lsquo;#my-div&rsquo;. Add the following code:</p>
-<pre><code>    $(&lsquo;#my-div img&rsquo;).mousedown(function() {
-        $(&lsquo;#my-div&rsquo;).append(
-        &lsquo;&lt;img class=&rdquo;shooting-space&rdquo; src=&rdquo;http://i.imgur.com/oTyQRvX.gif&rdquo;&gt;&rsquo;
-        );
-    })</code></pre>
-<p>We give our image the class &lsquo;shooting-space&rsquo; so that we can modify it in the next step. This will make sense in just a second.</p>
-<h3 id="make-ryu-shoot-third-step"><a name="user-content-make-ryu-shoot-third-step" href="#make-ryu-shoot-third-step" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Make Ryu shoot: third step</h3>
-<p>Here&rsquo;s where the real magic occurs. We&rsquo;re going to use the jQuery animate function. We&rsquo;ll explain it here, but you can also read the <a href="http://api.jquery.com/animate/">docs</a> for a good idea of what it does.</p>
-<p>First, we notice the &lsquo;.mousedown&rsquo; function below, which will look familiar. When we click Ryu, the followingn code will execute. Go ahead and add it to your file:</p>
-<pre><code>    $(&lsquo;#my-div img&rsquo;).mousedown(function() {
-        $(&lsquo;.shooting-space&rsquo;).animate( {
-            &ldquo;margin-left&rdquo;: &ldquo;600px&rdquo;
-        }, 1000, &lsquo;swing&rsquo;, function() {
-            this.remove();
-        })
-    })</code></pre>
-<p>the &lsquo;.animate&rsquo; function will, well, animate the Hadouken. Let&rsquo;s break it apart. First, </p>
-<pre><code>    &ldquo;margin-left&rdquo;: &ldquo;600px&rdquo;</code></pre>
-<p>tells us that we are going to slowly add a margin (space) to the left of the Hadouken image. In fact, we want it to  take</p>
-<pre><code>    1000
-</code></pre>
-<p>milliseconds to slowly add this margin. The &lsquo;swing&rsquo; part tells jQuery to ease in and out. We could have instead used &lsquo;linear&rsquo; which would not ease in and out. Finally, the last function says what the code should do when the animation is finished - in this case, remove the image of the Hadouken.</p>
-<h3 id="make-sure-its-working"><a name="user-content-make-sure-its-working" href="#make-sure-its-working" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Make sure it&rsquo;s working</h3>
-<p>To check your final product, you can download a finished version <a href="assets/html/fighter_after.html">here</a>.</p>
 <div class="footer"><p>&copy; Dining Philosophers 2014-15. Page created by <a href="http://pvrnav.com">Pranav Vishnu Ramabhadran</a>.</div>
 
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
