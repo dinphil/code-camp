@@ -1,4 +1,4 @@
-<div class="hidden"><meta property="og:image" content="http://dinphil.github.io/code-weekend/assets/img/logo.png"><link rel="shortcut icon" href="assets/images/favicon.png"><link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"><link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700' type='text/css'></div><img class="full-img" src="assets/img/logo.png"><div class="nav-items"><div class="nav-item" id="git-menu">Git/Command Line</div></div>
+<div class="hidden"><meta property="og:image" content="http://dinphil.github.io/code-weekend/assets/img/logo.png"><link rel="shortcut icon" href="assets/images/favicon.png"><link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"><link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700' type='text/css'></div><img class="full-img" src="assets/img/logo.png"><div class="nav-items"><div class="nav-item" id="git-menu">Git/Command Line</div><div class="nav-item" id="git-menu">jQuery</div></div>
 
 Code Camp
 ============
@@ -107,7 +107,106 @@ _Pushing_: Pushing is simply sending code to your repo on Github. See below for 
 
 _Pulling_: The expected opposite of pushing is pulling. You type *git pull* every time you need to get code from a repo you've already cloned off Github. When working with other coders, it's good practice to pull every time you begin working on code.
 
+Intro to jQuery <a id="git-section"></a>
+==================================
+with Cathy Chen and Joe Farned
+------------------------------------
 
+
+Example Project: Building an animated Street Fighter
+----------------------------------------------------
+
+For some practice, let's build an animated Street Fighter using the jQuery we have learned. The original tutorial can be found [here](http://www.thinkful.com/learn/intro-to-jquery).
+
+[Let's start by seeing how it will look when we've finished!](assets/html/fighter_after.html)
+
+### Download the file
+
+Let's start by downloading a file to get us started [here](assets/html/fighter_before.html). This file (fighter_before.html) is a basic HTML file. We've already included the line:
+
+        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+in the header. This imports the jQuery library into your file.
+
+### Use jQuery to add the starting image
+
+Our 'body' right now has only on one 'div' which is '#my-div'. We will start by adding the image to this div by adding the following code right below the '/** Add your code between here **/' comment:
+
+        $('#my-div').html('<img src="http://i.imgur.com/90Mmdcm.png">')
+
+This adds the following 'HTML' under my '#my-div':
+
+        <img src="http://i.imgur.com/90Mmdcm.png">
+
+Now, when you open your 'before_fighter.html' in your browser, you should see Ryu.
+
+### Add the first animation
+
+We want Ryu to get ready to fire when we hover our mouse over him. To do this, we use jQuery to select the image. Add the following code:
+
+        $('#my-div img').hover( function() {
+            this.src = 'http://i.imgur.com/nTj3Fxx.gif'
+        }, function() {
+            this.src = 'http://i.imgur.com/90Mmdcm.png'
+        })
+
+The first function says we should replace the current image with the one at 'http://i.imgur.com/nTj3Fxx.gif' when we hover the image. The second function tells us what image to use when we move our mouse off the image. Putting them together, we get a nice animating.
+
+### Make Ryu shoot: first step
+
+When the user clicks on Ryu, we want him to hunch down and appear as if he's shooting. To do this, we use the jQuery 'mousedown' function. '.mousedown' is called when we click on the image. Add the following line:
+
+        $('#my-div img').mousedown( function() {
+            this.src = 'http://i.imgur.com/Rfj0a80.png' 
+        })
+
+Now, the image we added earlier will be replaced by the new image of Ryu hunched down. As soon as we're done clicking (which is pretty much instantaneous), we want to revert back to the image of Ryu we started with. To this, we use the mouse-up function, which is not much different than the '.mousedown'. It's just called when we finish clicking. Add the following line:
+
+        $('#my-div img').mouseup(function() {
+            this.src = 'http://i.imgur.com/90Mmdcm.png'
+        })
+
+### Make Ryu shoot: second step
+
+Now, we're going to add in the Hadouken - what Ryu shoots. To do this, we realize that when we click, we want a new image - of the Hadouken - to be added to screen. 
+
+In fact, we just saw an example of how to get a click event - the '.mousedown' function! Let's use it again. This time, we'll add a new image to '#my-div'. Add the following code:
+
+        $('#my-div img').mousedown(function() {
+            $('#my-div').append(
+            '<img class="shooting-space" src="http://i.imgur.com/oTyQRvX.gif">'
+            );
+        })
+
+We give our image the class 'shooting-space' so that we can modify it in the next step. This will make sense in just a second.
+
+### Make Ryu shoot: third step
+
+Here's where the real magic occurs. We're going to use the jQuery animate function. We'll explain it here, but you can also read the [docs](http://api.jquery.com/animate/) for a good idea of what it does.
+
+First, we notice the '.mousedown' function below, which will look familiar. When we click Ryu, the followingn code will execute. Go ahead and add it to your file:
+
+        $('#my-div img').mousedown(function() {
+            $('.shooting-space').animate( {
+                "margin-left": "600px"
+            }, 1000, 'swing', function() {
+                this.remove();
+            })
+        })
+
+the '.animate' function will, well, animate the Hadouken. Let's break it apart. First, 
+
+        "margin-left": "600px"
+
+tells us that we are going to slowly add a margin (space) to the left of the Hadouken image. In fact, we want it to  take
+
+        1000
+
+milliseconds to slowly add this margin. The 'swing' part tells jQuery to ease in and out. We could have instead used 'linear' which would not ease in and out. Finally, the last function says what the code should do when the animation is finished - in this case, remove the image of the Hadouken.
+
+### Make sure it's working
+
+To check your final product, you can download a finished version [here](assets/html/fighter_after.html).
 
 <div class="footer"><p>&copy; Dining Philosophers 2014-15. Page created by <a href="http://pvrnav.com">Pranav Vishnu Ramabhadran</a>.</div>
 
