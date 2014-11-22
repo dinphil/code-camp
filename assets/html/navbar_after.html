@@ -1,0 +1,102 @@
+<html>
+
+<!-- Head -->
+<head>
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript">
+	$( document ).ready(function() {
+		/** Add your code between here **/
+
+		// opening the submenu
+		$('.myMenu > li').bind('mouseover', openSubMenu);
+		function openSubMenu() {
+			$(this).find('ul').css('visibility', 'visible');	
+		};
+
+		// closing the submenu
+		function closeSubMenu() {
+			$(this).find('ul').css('visibility', 'hidden');	
+		};
+		$('.myMenu > li').bind('mouseout', closeSubMenu);
+		/** And here! **/
+	});
+
+	</script>
+	<style>
+	/*style the main menu*/
+	.myMenu {
+		margin:0;
+		padding:0;
+	}
+
+	.myMenu li {
+		list-style:none;
+		float:left;
+		font:12px Arial, Helvetica, sans-serif #111;
+	}
+
+	.myMenu li a:link, .myMenu li a:visited {
+		display:block;
+		text-decoration:none;
+		background-color:#09F;
+		padding: 0.5em 2em;
+		margin:0;
+		border-right: 1px solid #fff;
+		color:#111;
+	}
+
+	.myMenu li a:hover {
+		background-color:#0CF;	
+	}
+
+	/*style the sub menu*/
+	.myMenu li ul {
+		position:absolute;
+		visibility:hidden;
+		border-top:1px solid #fff;
+		margin:0;
+		padding:0;
+	}
+
+	.myMenu li ul li {
+		display:inline;
+		float:none;
+	}
+
+	.myMenu li ul li a:link, .myMenu li ul li a:visited {
+		background-color:#09F;
+		width:auto;
+	}
+
+	.myMenu li ul li a:hover {
+		background-color:#0CF;	
+	}
+	</style>
+</head>
+
+<!-- Body -->
+<body>
+	<ul class="myMenu">
+		<li><a href="#">menu item 1</a></li>
+		<li><a href="#">menu item 2</a>
+			<ul>
+				<li><a href="#">sub menu item 1</a></li>
+				<li><a href="#">sub menu item 2</a></li>
+				<li><a href="#">sub menu item 3</a></li>
+				<li><a href="#">sub menu item 4</a></li>
+			</ul>
+		</li>
+		<li><a href="#">menu item 3</a>
+			<ul>
+				<li><a href="#">sub menu item 1</a></li>
+				<li><a href="#">sub menu item 2</a></li>
+				<li><a href="#">sub menu item 3</a></li>
+				<li><a href="#">sub menu item 4</a></li>
+			</ul>
+		</li>
+		<li><a href="#">menu item 4</a></li>
+		<li><a href="#">menu item 5</a></li>
+	</ul>
+</body>
+
+</html>

@@ -1,4 +1,4 @@
-<div class="hidden"><meta property="og:image" content="http://dinphil.github.io/code-weekend/assets/img/logo.png"><link rel="shortcut icon" href="assets/images/favicon.png"><link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"><link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700' type='text/css'></div><img class="full-img" src="assets/img/logo.png"><div class="nav-items"><div class="nav-item" id="git-menu">Git/Command Line</div><div class="nav-item" id="git-menu">jQuery</div></div>
+<div class="hidden"><meta property="og:image" content="http://dinphil.github.io/code-weekend/assets/img/logo.png"><link rel="shortcut icon" href="assets/images/favicon.png"><link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"><link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700' type='text/css'></div><img class="full-img" src="assets/img/logo.png"><div class="nav-items"><div class="nav-item" id="jquery-menu">jQuery</div><div class="nav-item" id="git-menu">Git/Command Line</div></div>
 
 Code Camp
 ============
@@ -10,7 +10,7 @@ Code Camp is a workshop series hosted by the Dining Philosophers at the Universi
 > These workshops have been organized by the Dining Philosophers with the help of many talented individuals. Individual workshops will be credited to the people that made and ran them.
 
 
-Intro to jQuery <a id="git-section"></a>
+Intro to jQuery <a id="jquery-section"></a>
 ==================================
 with Cathy Chen and Joe Farned
 ------------------------------------
@@ -29,6 +29,10 @@ It basically let's you select certain HTML elements and do cool things with them
 
 ###Playing around in the Google Chrome Javascript Console
 
+What is the Javascript Console? It's a cool tool on Chrome that you can use when developing. You can pull it up by clicking the menu on the top right of the browser and going down to More Tools > Javascript Console. It looks like this:
+
+![Console](assets/img/console.png)
+
 To get acquainted with jQuery and Javascript, it's a great idea to play around with websites using the console! It allows you to inject bits of Javascript code into the website so you can see whatever changes you make live. (Make sure the website you're playing around with has jQuery enabled like [this](http://www.dolphin.upenn.edu/hksa/index.html) one.)
 
 Things you can try:
@@ -42,6 +46,54 @@ Things you can try:
             });
 
         // the cool thing about jQuery is that you can click one area of the page and have something happen to a totally separate section of the page
+
+###Navbar Demo
+
+You can use jQuery to make your menus interactive. Here's a simple example of a dropdown navbar you can make with jQuery.
+
+[Let's start by seeing how it will look when we've finished!](assets/html/navbar_after.html)
+
+#### The Starting File
+
+[The starting file](assets/html/navbar_before.html)
+
+We'll be giving you a small template to work with! All the CSS styles and HTML markup has been done for you so all you need to do is add the Javascript/jQuery between the "script" tags!
+
+#### Opening the SubMenu
+
+First let's add an event listener to the button:
+
+        $('.myMenu > li').bind('mouseover', openSubMenu);
+
+This calls the function "openSubMenu" when you mouse over the menu button.
+
+Now let's create the function "openSubMenu":
+        
+        function openSubMenu() {
+            
+            // changes the visibility of the submenu to visible
+            $(this).find('ul').css('visibility', 'visible');    
+        };
+
+Now when you hover over the button it should drop down! But the problem now is that it doesn't close when you leave the button.
+
+#### Closing the SubMenu
+
+Let's add another event listner to the button:
+
+        $('.myMenu > li').bind('mouseout', closeSubMenu);
+
+This calls the function "closeSubMenu" when your mouse leaves the menu button.
+
+Now let's create the function "closeSubMenu":
+
+        function closeSubMenu() {
+
+            // changes the visibility of the submenu to hidden
+            $(this).find('ul').css('visibility', 'hidden'); 
+        };
+
+Now when your mouse leaves the sub menu will disappear.
 
 
 ###Hadouken Animation Challenge

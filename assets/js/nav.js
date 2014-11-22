@@ -9,5 +9,13 @@ $(document).ready(function(){
         }, 500);
         
     }); 
+
+    $('#jquery-menu').click(function(){
+        
+        $('html, body').animate({
+            scrollTop: $("#jquery-section").offset().top
+        }, 500);
+        
+    }); 
     
 });
