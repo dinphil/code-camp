@@ -1,0 +1,51 @@
+<html>
+
+<!-- Head -->
+<head>
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript">
+		$( document ).ready(function() {
+			/** Add your code between here **/
+
+			$('#my-div').html('<img src="http://i.imgur.com/90Mmdcm.png">')
+			
+			$('#my-div img').hover( function() {
+			    this.src = 'http://i.imgur.com/nTj3Fxx.gif'
+			}, function() {
+			    this.src = 'http://i.imgur.com/90Mmdcm.png'
+			})
+
+			$('#my-div img').mousedown( function() {
+			    this.src = 'http://i.imgur.com/Rfj0a80.png' 
+			})
+
+			$('#my-div img').mouseup(function() {
+			    this.src = 'http://i.imgur.com/90Mmdcm.png'
+			})
+
+			$('#my-div img').mousedown(function() {
+			    $('#my-div').append(
+			    '<img class="shooting-space" src="http://i.imgur.com/oTyQRvX.gif">'
+			    );
+			})
+
+			$('#my-div img').mousedown(function() {
+			    $('.shooting-space').animate( {
+			        "margin-left": "600px"
+			    }, 1000, 'swing', function() {
+			        this.remove();
+			    })
+			})
+
+			/** And here! **/
+		});
+
+	</script>
+</head>
+
+<!-- Body -->
+<body>
+	<div id="my-div"></div>
+</body>
+
+</html>
