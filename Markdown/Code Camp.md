@@ -15,7 +15,7 @@ Intro to jQuery <a id="jquery-section"></a>
 with Cathy Chen and Joe Farned
 ------------------------------------
 
-Scheduled for November 22th, 2014. The tutorial will run from 3 PM to 5 PM in McClelland. See the powerpoint slides for the workshop [here](assets/intro_jquery.pdf);
+This workshop was held on November 22th, 2014. See the powerpoint slides for the workshop [here](assets/intro_jquery.pdf);
 
 ###To install
 * Sublime Text
@@ -195,7 +195,7 @@ Intro to Git and Command Line <a id="git-section"></a>
 with Brynn Claypoole
 ------------------------------------
 
-Schdeuled for October 25th, 2014. The tutorial will run from 3 PM to 5 PM in McClelland.
+This workshop was held on October 25th, 2014.
 
 ###Installing Git
 
@@ -288,7 +288,7 @@ _Pushing_: Pushing is simply sending code to your repo on Github. See below for 
 _Pulling_: The expected opposite of pushing is pulling. You type *git pull* every time you need to get code from a repo you've already cloned off Github. When working with other coders, it's good practice to pull every time you begin working on code.
 
 
-<div class="footer"><p>&copy; Dining Philosophers 2014-15. Page created by <a href="http://pvrnav.com">Pranav Vishnu Ramabhadran</a>.</div>
+<div class="footer"><p>&copy; Dining Philosophers 2015. Page created by <a href="http://pvrnav.com">Pranav Vishnu Ramabhadran</a>.</div>
 
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script src="assets/js/nav.js"></script>
@@ -300,10 +300,5 @@ _Pulling_: The expected opposite of pushing is pulling. You type *git pull* ever
         minFont   : 16,
         maxFont   : 65,
         fontRatio : 40
-    });
-</script>
-<script>
-    $(window).load(function(){
-        $('.loading').fadeOut('200');
     });
 </script>

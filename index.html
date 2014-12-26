@@ -13,21 +13,23 @@ body {
 h1 {
   font-weight: 400;
   font-size: 2.5em;
-  border: none; }
+  border: none;
+  margin: 0.2em 0em; }
 
 h2 {
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.4;
   font-size: 1.5em;
   border: none; }
 
 h3 {
-  font-weight: 300;
+  font-weight: 400;
   font-size: 1.3em;
   color: #972e2e; }
 
 h4 {
-  font-weight: 300;
+  font-size: 1.2em;
+  font-weight: 400;
 }
 
 p, ol, ul {
@@ -112,7 +114,6 @@ body {
     color: #111111;
     font-size: 1em;
     display: block;
-    text-align: justify;
     padding: 10px;
     font-weight: 300;
    }
@@ -126,8 +127,7 @@ body {
       color: #972e2e;
     }
    em{
-    background: #972e2e;
-    color: white;
+    color: #972e2e;
     padding: 0.17em;
     font-weight: 300;
     font-size: 1em;
@@ -135,7 +135,12 @@ body {
    }
    blockquote{
     margin: 20px 10%;
+    border-left: 2vw solid #004E78;
    }
+    blockquote p {
+      color: #14587D;
+      margin: 0;
+    }
    ol, ul {
     margin: 20px 12%;
    }
@@ -149,13 +154,13 @@ pre{
   text-align: left;
   font-weight: 300;
   font-size: 0.8em;
-  background: #2e4b97;
   margin: 0;
-  overflow: scroll;
+  word-wrap: break-word;
+  background: #004E78;
 }
   code{
-    background: #2e4b97;
-    color: white;
+    background: #004E78;
+    color: #66BEED;
     font-size: 0.8em;
     padding: 0.1em;
     font-weight: 300;
@@ -228,7 +233,7 @@ img.full-img{
 </blockquote>
 <h1 id="intro-to-jquery"><a name="user-content-intro-to-jquery" href="#intro-to-jquery" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Intro to jQuery <a id="jquery-section"></a></h1>
 <h2 id="with-cathy-chen-and-joe-farned"><a name="user-content-with-cathy-chen-and-joe-farned" href="#with-cathy-chen-and-joe-farned" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>with Cathy Chen and Joe Farned</h2>
-<p>Scheduled for November 22th, 2014. The tutorial will run from 3 PM to 5 PM in McClelland. See the powerpoint slides for the workshop <a href="assets/intro_jquery.pdf">here</a>;</p>
+<p>This workshop was held on November 22th, 2014. See the powerpoint slides for the workshop <a href="assets/intro_jquery.pdf">here</a>;</p>
 <h3 id="to-install"><a name="user-content-to-install" href="#to-install" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>To install</h3>
 <ul>
 <li>Sublime Text</li>
@@ -338,7 +343,7 @@ img.full-img{
 <p>To check your final product, you can download a finished version <a href="assets/html/fighter_after.html">here</a>.</p>
 <h1 id="intro-to-git-and-command-line"><a name="user-content-intro-to-git-and-command-line" href="#intro-to-git-and-command-line" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Intro to Git and Command Line <a id="git-section"></a></h1>
 <h2 id="with-brynn-claypoole"><a name="user-content-with-brynn-claypoole" href="#with-brynn-claypoole" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>with Brynn Claypoole</h2>
-<p>Schdeuled for October 25th, 2014. The tutorial will run from 3 PM to 5 PM in McClelland.</p>
+<p>This workshop was held on October 25th, 2014.</p>
 <h3 id="installing-git"><a name="user-content-installing-git" href="#installing-git" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Installing Git</h3>
 <p>Start off by getting ready to use Git via command line. You can find downloadable versions <a href="http://git-scm.com/downloads">here</a>. You may already have git installed: If you have a Mac/Linux machine, search for the &ldquo;Terminal&rdquo; application, then type &ldquo;git&rdquo; and hit enter. If it doesn&rsquo;t say &ldquo;command not found&rdquo;, you should be good! Windows users should search their applications for &ldquo;Git Bash&rdquo;.</p>
 <h3 id="what-is-command-line"><a name="user-content-what-is-command-line" href="#what-is-command-line" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>What is command line?</h3>
@@ -395,7 +400,7 @@ img.full-img{
     //Push your code to Github (origin) at the master branch
     git push origin master</code></pre>
 <p><em>Pulling</em>: The expected opposite of pushing is pulling. You type <em>git pull</em> every time you need to get code from a repo you&rsquo;ve already cloned off Github. When working with other coders, it&rsquo;s good practice to pull every time you begin working on code.</p>
-<div class="footer"><p>&copy; Dining Philosophers 2014-15. Page created by <a href="http://pvrnav.com">Pranav Vishnu Ramabhadran</a>.</div>
+<div class="footer"><p>&copy; Dining Philosophers 2015. Page created by <a href="http://pvrnav.com">Pranav Vishnu Ramabhadran</a>.</div>
 
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 
@@ -410,11 +415,5 @@ img.full-img{
         minFont   : 16,
         maxFont   : 65,
         fontRatio : 40
-    });
-</script>
-
-<script>
-    $(window).load(function(){
-        $('.loading').fadeOut('200');
     });
 </script></article></body></html>
